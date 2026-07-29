@@ -31,6 +31,17 @@ let daftarRestoran = [
     },
 ]
 
-function filterRestoranFavorit(daftarRestoran){
+function filterRestoranFavorit(daftarRestoran) {
+    const sesuaiKriteria = []
 
+    for (let i = 0; i < daftarRestoran.length; i++) {
+        if (daftarRestoran[i].rating >= 4.5 && daftarRestoran[i].buka == true) {
+            sesuaiKriteria.push(daftarRestoran[i])
+        }
+    }
+
+    return console.log(sesuaiKriteria)
 }
+
+
+filterRestoranFavorit(daftarRestoran)
