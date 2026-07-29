@@ -8,15 +8,9 @@ function jenisTanggal(nomorPlat, tanggal) {
     let kendaraanTidakBolehMasuk = []
     let kategoriTanggal
 
-    if (tanggal % 2 === 0) {
-        kategoriTanggal = 'Genap'
-    } else {
-        kategoriTanggal = 'Ganjil'
-    }
-
     for (let i = 0; i < daftarPlat.length; i++) {
         let nomorPlatSingle = nomorPlat[i]
-        if (nomorPlat[i] % 2 === 0) {
+        if (nomorPlat[i] % 2 === tanggal % 2 ) {
             statusIzin = 'diizinkan masuk.'
             kendaraanBolehMasuk.push(`${nomorPlat[i]} ${statusIzin}`)
         } else {
