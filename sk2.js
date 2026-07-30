@@ -1,19 +1,38 @@
-const namaMahasiswa = ['Budi', 'Dimas', 'Andi', 'Yanto']
-const ipkMahasiswa = [3.5, 2.5, 1.5, 4.0]
-const pendapatanOrangTua = [5000000, 2500000, 10000000, 100000000]
+const dataMahasiswa = [
+    {
+        namaMahasiswa: 'Budi',
+        IPK: 3.5,
+        pendapatanOrangTua: 5000000
+    },
+    {
+        namaMahasiswa: 'Dimas',
+        IPK: 2.5,
+        pendapatanOrangTua: 2500000
+    },
+    {
+        namaMahasiswa: 'Andi',
+        IPK: 1.5,
+        pendapatanOrangTua: 10000000
+    },
+    {
+        namaMahasiswa: 'Yanto',
+        IPK: 4.0,
+        pendapatanOrangTua: 100000000
+    },
+]
 
 
-function seleksiBeasiswa(namaMahasiswa, IPK, pendapatanOrangTua) {
+function seleksiBeasiswa(dataTheMahasiswa) {
 
-    for (let i = 0; i < namaMahasiswa.length; i++) {
-        if (IPK[i] >= 3.5 && pendapatanOrangTua[i] <= 5000000) {
+    for (let i = 0; i < dataTheMahasiswa.length; i++) {
+        if (dataTheMahasiswa[i].IPK >= 3.5 && dataTheMahasiswa[i].pendapatanOrangTua <= 5000000) {
             statusKelulusan = 'Lolos'
         } else {
             statusKelulusan = 'Tidak Lolos'
         }
-        console.log(`${namaMahasiswa[i]} dinyatakan ${statusKelulusan}`)
+        console.log(`${dataTheMahasiswa[i].namaMahasiswa} dinyatakan ${statusKelulusan}`)
     }
 }
 
 
-seleksiBeasiswa(namaMahasiswa, ipkMahasiswa, pendapatanOrangTua)
+seleksiBeasiswa(dataMahasiswa)
