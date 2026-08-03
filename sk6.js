@@ -1,6 +1,6 @@
 let daftarJamKerja = [5, 6, 7, 8, 9, 10] //turut memprihatinkan buat yang jam kerjannya cek gini cak.
 
-function hitungGajiMingguan(daftarJamKerja) {
+function hitunGajiMingguan(daftarjamkerja) {
     const baseSalary = 50000
     const baseLemburSalary = 75000
 
@@ -22,4 +22,4 @@ function hitungGajiMingguan(daftarJamKerja) {
 }
 
 
-hitungGajiMingguan(daftarJamKerja)
+hitunGajiMingguan(daftarJamKerja)
